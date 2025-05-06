@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import TemplateView
 from . import views
 
@@ -6,6 +6,7 @@ app_name = 'kvitsapp'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('vesture/', views.vesture, name='vesture'),
 
     # Enges
     path('enges/parastas.html', TemplateView.as_view(template_name="enges/parastas.html"), name='parastas'),

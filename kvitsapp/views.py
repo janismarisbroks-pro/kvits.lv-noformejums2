@@ -23,6 +23,9 @@ def product_list(request):
     products = Product.objects.all()
     return render(request, 'product_list.html', {'products': products})
 
+def vesture(request):
+    return render(request, 'vesture.html')
+
 # def product_list(request):
 #     """
 #     View to display products in a tile layout with pagination
